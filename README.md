@@ -4,24 +4,24 @@
 ```
 owner
 ```
-*f*
+*Deployer address of VendingMachine.sol*
 
 ```
 donutBalances
 ```
-*f*
+*Donut balances of users.*
 
 ```
 getVendingMachineBalance()
 ```
-*f*
+*Donut balances of vending machine. Important for `purchase()`*
 
 ```
 restock()
 ```
-*f*
+*Increases amount of donuts in vending machine.*
 
 ```
 purchase()
 ```
-*f*
+*Decreases amount of donuts in vending machine, gives caller donuts in exchange for ETH. 1 ETH per donut.*
