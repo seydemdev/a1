@@ -1,32 +1,27 @@
 # Vending Machine
-**f**
+**Vending machine which lets you purchase donuts, restock donuts and see your balance of donuts.**
 
 ```
-f
+owner
 ```
 *f*
 
 ```
-f
+donutBalances
 ```
 *f*
 
 ```
-f
+getVendingMachineBalance()
 ```
 *f*
 
 ```
-f
+restock()
 ```
 *f*
 
 ```
-f
-```
-*f*
-
-```
-f
+purchase()
 ```
 *f*
