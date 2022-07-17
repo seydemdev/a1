@@ -1,3 +1,6 @@
+error NotOwner();
+error InsufficientAmount();
+
 contract VendingMachine {
 
     address public immutable owner;
@@ -14,13 +17,13 @@ contract VendingMachine {
     }
 
     function restock(uint256 amount) external {
-        require(msg.sender == owner, "Not owner");
+        if (msg.sender != owner) revert NotOwner();
         donutBalances[address(this)] += amount;
     }
 
     function purchase(uint256 amount) external payable {
-        require(msg.value >= amount * 1 ether, "Need to pay at least 1 ETH");
-        require(donutBalances[address(this)] >= amount, "Not enough donuts in stock");
+        if (msg.value < amount * 1 ether) revert InsufficientAmount();
+        if (donutBalances[address(this)] < amount) revert InsufficientAmount();
         donutBalances[address(this)] -= amount;
         donutBalances[msg.sender] += amount;
     }
