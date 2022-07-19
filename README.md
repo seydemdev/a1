@@ -24,4 +24,4 @@ restock()
 ```
 purchase()
 ```
-*Decreases amount of donuts in vending machine, gives caller donuts in exchange for ETH. 1 ETH per donut.*
+*Decreases amount of donuts in vending machine, gives caller donuts in exchange for ETH. 0.001 ETH per donut.*
