@@ -22,7 +22,7 @@ contract VendingMachine {
     }
 
     function purchase(uint256 amount) external payable {
-        if (msg.value < amount * 1 ether) revert InsufficientAmount();
+        if (msg.value < amount * 0.001 ether) revert InsufficientAmount();
         if (donutBalances[address(this)] < amount) revert InsufficientAmount();
         donutBalances[address(this)] -= amount;
         donutBalances[msg.sender] += amount;
