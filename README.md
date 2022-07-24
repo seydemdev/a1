@@ -4,7 +4,7 @@
 ```
 owner
 ```
-*Deployer address of VendingMachine.sol*
+*Address of contract deployer.*
 
 ```
 donutBalances
